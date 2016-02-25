@@ -16,7 +16,6 @@
     <meta name="description" content="Crossing the borders between concert and ceremony, electronic and live, audio and visuals, with love." />
 	</head>
 	<body>
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -25,6 +24,7 @@
             <h1><a href="/"><strong>Kegais</strong></a></h1>
 						<nav>
 							<ul>
+                <li><a id='vidpause' href="#" class='icon fa-volume-up'>Volume</a></li>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
 							</ul>
 						</nav>
@@ -95,6 +95,27 @@ Most images on this website are created with <a href="http://lucidity.io">lucidi
     <script src="/assets/js/util.js"></script>
     <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="/assets/js/main.js"></script>
+    <script>
+      var vid = document.getElementById("bgvid")
+      var btn = document.getElementById("vidpause")
+      btn.addEventListener
+      ( "click"
+      , function ()
+        {
+          vid.muted = !vid.muted
+          btn.className = "icon fa-volume" + (vid.muted ? '-off' : '-up')
+        }
+      ) 
+      var vidplay = document.getElementById("vidplay")
+      vidplay.addEventListener
+      ( "click"
+      , function ()
+        {
+          vid.play ()
+          $('#bg').fadeOut ()
+        }
+      ) 
+    </script>
 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
