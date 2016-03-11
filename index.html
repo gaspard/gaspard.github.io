@@ -24,7 +24,6 @@
             <h1><a href="/"><strong>Kegais</strong></a></h1>
 						<nav>
 							<ul>
-                <li><a id='vidpause' href="#" class='icon fa-volume-up'>Volume</a></li>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
 							</ul>
 						</nav>
@@ -33,81 +32,7 @@
 				<!-- Main -->
 					<div id="main">
             
-              <!-- 
-
-<article class="thumb">
-  <a href="/images/med/biography.jpg" class="image">
-    <img src="/images/thumb/biography.jpg" alt="" />
-  </a>
-  <h2>biography</h2>
-  <p><p>Gaspard Bucher, born in 1975, studied fine arts in ECAV, Switzerland and received prices from the Valais state and Swiss Art Awards for his work as a performer.</p>
-<p>He has been programming computers since 1985 to create music, games, explore
-artificial intelligence, machine learning, create interactive visuals for his
-works as choreographer or create other open source software in Ruby, Lua or
-Javascript.</p>
-<p>As <a href="http://gaspardbuma.org">Gaspard Buma</a>, he has created more then twenty
-theatrical shows and solo performances shown in many festivals and galleries.</p>
-<p>He now dedicates all his time to KEGAIS and <a href="http://lucidity.io">lucidity</a> with
-his company <a href="http://lucidogen">lucidogen</a> located in the mountains of
-Valais in Switzerland.</p>
-</p>
-</article>
-
-<article class="thumb">
-  <a href="/images/med/2016-02-22-kegais-gaspard-bucher.jpg" class="image">
-    <img src="/images/thumb/2016-02-22-kegais-gaspard-bucher.jpg" alt="" />
-  </a>
-  <h2>Kegais replaces Gaspard Buma</h2>
-  <p><p>Kegais is a word in &#39;Keoda&#39; a secret language for sex that I am working on. This
-identity replaces Gaspard Buma (<a href="http://gaspardbuma.org">gaspardbuma.org</a>) and
-bumagy (<a href="http://buma.squarespace.com">buma.gy</a>).
-The websites for previous identities will be closed and archived. </p>
-</p>
-</article>
-
-<article class="thumb">
-  <a href="/images/med/2015-09-16-anaglyph-experiment-1.jpg" class="image">
-    <img src="/images/thumb/2015-09-16-anaglyph-experiment-1.jpg" alt="" />
-  </a>
-  <h2>anaglyph experiment #1</h2>
-  <p><p>Exploring (anaglyph)[<a href="http://paulbourke.net/stereographics/stereorender">http://paulbourke.net/stereographics/stereorender</a>] stereo images (with blur post-fx).</p>
-</p>
-</article>
-
-<article class="thumb">
-  <a href="/images/med/2015-06-15-video-experiment-1.jpg" class="image">
-    <img src="/images/thumb/2015-06-15-video-experiment-1.jpg" alt="" />
-  </a>
-  <h2>video experiment #1</h2>
-  <p><p>Experimenting with shader effects on top of video playback. The original image
-is algae movements in a river in Hampi, India.</p>
-</p>
-</article>
-
-<article class="thumb">
-  <a href="/images/med/2015-06-11-sobel-filter-experiment-1.jpg" class="image">
-    <img src="/images/thumb/2015-06-11-sobel-filter-experiment-1.jpg" alt="" />
-  </a>
-  <h2>sobel filter experiment #1</h2>
-  <p><p>First Sobel filter implementation.
-See <a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/sobel.htm">Sobel filter</a> article. </p>
-</p>
-</article>
-
-<article class="thumb">
-  <a href="/images/med/2015-06-08-ray-marching-experiment-1.jpg" class="image">
-    <img src="/images/thumb/2015-06-08-ray-marching-experiment-1.jpg" alt="" />
-  </a>
-  <h2>ray marching experiment #1</h2>
-  <p><p>Ray marching hack.
-See <a href="http://www.iquilezles.org/www/articles/terrainmarching/terrainmarching.htm">Íñigo Quílez</a> article.  </p>
-</p>
-</article>
-
--->
-              <video id="bgvid">
-                <source src="https://www.dropbox.com/s/5s84gmiqfy9ou1w/coming_soon_8k.mp4?raw=1" type="video/mp4">
-              </video>
+              
               <div id="bg">
                 <img src='/images/full/shiva.jpg'>
                 <div class='over'>
@@ -186,16 +111,6 @@ secret events.</p>
     <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="/assets/js/main.js"></script>
     <script>
-      var vid = document.getElementById("bgvid")
-      var btn = document.getElementById("vidpause")
-      btn.addEventListener
-      ( "click"
-      , function ()
-        {
-          vid.muted = !vid.muted
-          btn.className = "icon fa-volume" + (vid.muted ? '-off' : '-up')
-        }
-      ) 
       var vidplay = document.getElementById("vidplay")
       if ( vidplay )
       {
@@ -203,7 +118,10 @@ secret events.</p>
         ( "click"
         , function ()
           {
-            vid.play ()
+            $('#main')
+            .prepend
+            ( '<iframe id="bgvid" src="https://player.vimeo.com/video/156813521?autoplay=1" width="80%" height="80%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen autoplay="1"></iframe>'
+            )
             $('#bg').fadeOut ()
           }
         ) 
