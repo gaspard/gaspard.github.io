@@ -32,10 +32,23 @@
 
 				<!-- Main -->
 					<div id="main">
-            <p>Kegais is a word in &#39;Keoda&#39; a secret language for sex that I am working on. This
+            
+              <div class='article'>
+                <a class='closer' href='/'></a>
+                <h1>
+                  2016-02-22-kegais-gaspard-bucher
+                </h1>
+                <p>Kegais is a word in &#39;Keoda&#39; a secret language for sex that I am working on. This
 identity replaces Gaspard Buma (<a href="http://gaspardbuma.org">gaspardbuma.org</a>) and
 bumagy (<a href="http://buma.squarespace.com">buma.gy</a>).
 The websites for previous identities will be closed and archived. </p>
+              </div>
+              <div id="bg">
+                <img src='/images/full/shiva.jpg'>
+              </div>
+            
+
+
 					</div>
 
 				<!-- Footer -->
@@ -46,6 +59,7 @@ The websites for previous identities will be closed and archived. </p>
 									<h2>Kegais - Gaspard Bucher</h2>
                   <p><p>Crossing the borders between concert and ceremony, electronic and live, audio and visuals, with love.
 Most images on this website are created with <a href="http://lucidity.io">lucidity</a>.</p>
+<p><a href="/articles/biography">Biography</a></p>
 </p>
 								</section>
 								<section>
@@ -66,19 +80,27 @@ Most images on this website are created with <a href="http://lucidity.io">lucidi
 							<div>
 								<section>
 									<h2>Get in touch</h2>
-									<form method="post" action="http://formspree.io/webform@kegais.com">
+                  <p><p>Sign-up to get free tickets, music or videos and a chance to access one of the
+secret events.</p>
+</p>
+
+                  <form method="post" action="http://buma.us7.list-manage1.com/subscribe/post">
+                    <input type="hidden" name="u" value="663f145e81e41ea52adda6c64">
+                    <input type="hidden" name="id" value="bfa0cf67b7">
 										<div class="field half first">
-											<input type="text" name="name" id="name" placeholder="Name" />
+											<input type="text" autocapitalize="off"
+                      autocorrect="off" name="MERGE1" id="MERGE1" placeholder="Name" />
 										</div>
 										<div class="field half">
-											<input type="text" name="_replyto" id="email" placeholder="Email" />
+											<input type="text" autocapitalize="off"
+                      autocorrect="off" name="MERGE0" id="MERGE0" placeholder="Email" />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+											<textarea name="MERGE3" id="MERGE3" rows="2" placeholder="Message"></textarea>
 										</div>
 										<ul class="actions">
-											<li><input type="submit" value="Send" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
+											<li><input type="submit" value="Sign-up" class="special" /></li>
+											<!-- li><input type="reset" value="Reset" /></li -->
 										</ul>
 									</form>
 								</section>
@@ -107,14 +129,17 @@ Most images on this website are created with <a href="http://lucidity.io">lucidi
         }
       ) 
       var vidplay = document.getElementById("vidplay")
-      vidplay.addEventListener
-      ( "click"
-      , function ()
-        {
-          vid.play ()
-          $('#bg').fadeOut ()
-        }
-      ) 
+      if ( vidplay )
+      {
+        vidplay.addEventListener
+        ( "click"
+        , function ()
+          {
+            vid.play ()
+            $('#bg').fadeOut ()
+          }
+        ) 
+      }
     </script>
 
     <script>
